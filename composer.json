@@ -1,0 +1,28 @@
+{
+  "name": "daniel/timetable-viewer",
+  "description": "Simple Timetable viewer",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Daniel Peters",
+      "email": "daniel.peters.ch@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "lib\\": "lib/src/",
+      "timetable\\": "src/php/"
+    }
+  },
+  "require": {
+    "php": "^7.2",
+    "ext-json": "*",
+    "ext-fileinfo": "*",
+    "ext-pdo": "*",
+    "ext-sockets": "*",
+    "ext-mysqli": "*",
+    "ext-pdo_mysql": "*",
+    "ext-gd": "*"
+  }
+}

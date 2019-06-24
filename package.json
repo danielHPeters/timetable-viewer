@@ -1,0 +1,37 @@
+{
+  "name": "timetable-viewer",
+  "version": "1.0.0",
+  "description": "Timetable App",
+  "main": "public/index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "css": "node-sass src/sass/ -o public/css/ --source-map true",
+    "css:min": "node-sass src/sass/ -o public/css/ --output-style compressed --source-map true",
+    "css:watch": "npm run css && node-sass -w src/sass/ -o public/css/ --source-map true",
+    "js": "./node_modules/.bin/webpack --mode=production",
+    "js:watch": "./node_modules/.bin/webpack --watch --mode=development",
+    "dev": "run-p js:watch css:watch",
+    "prod": "npm run js && npm run css:min"
+  },
+  "keywords": [
+    "Timetable",
+    "Typescript"
+  ],
+  "author": "Daniel Peters",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/materialize-css": "^1.0.6",
+    "awesome-typescript-loader": "^5.2.1",
+    "chai": "^4.2.0",
+    "materialize-css": "^1.0.0",
+    "mocha": "^6.1.4",
+    "node-sass": "^4.12.0",
+    "sass-lint": "^1.13.1",
+    "source-map-loader": "^0.2.4",
+    "tslint": "^5.18.0",
+    "tslint-config-standard": "^8.0.1",
+    "typescript": "^3.5.2",
+    "webpack": "^4.35.0",
+    "webpack-command": "^0.4.2"
+  }
+}

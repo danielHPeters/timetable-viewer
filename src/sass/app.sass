@@ -1,0 +1,166 @@
+@charset "UTF-8"
+@import '../../node_modules/materialize-css/sass/materialize'
+
+$wrapper-shadow: 0 10px 16px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19)
+$content-shadow: 3px 2px 10px rgba(35, 35, 35, 1)
+$background-image: '../img/background/swirl.png'
+$title-font-size: 1.9em
+$text-font-size: 12pt
+$vendor-red: #f00
+$vendor-green: #006400
+$vendor-yellow: #ff0
+$vendor-cyan: #009de0
+$vendor-black: #000
+$vendor-light-blue: #99d9f4
+$vendor-white: #fff
+$vendor-beige: #e2f6ff
+$vendor-grey: #333
+$box-text-padding: 10px
+
+.vendor-cyan
+  background-color: $vendor-cyan
+
+.background-layer
+  background-image: url($background-image)
+
+.blue
+  background-color: $vendor-cyan
+  color: $vendor-white
+
+.wrapper
+  border: 1px solid $vendor-black
+  box-shadow: $wrapper-shadow
+  position: relative
+  width: 100%
+
+nav
+  background-color: $vendor-grey
+  color: $vendor-white
+
+.app
+  align-content: stretch
+  display: flex
+  flex-flow: row wrap
+  height: 100%
+  justify-content: center
+  width: 100%
+
+.box
+  background-color: $vendor-beige
+  border: 10px solid $vendor-cyan
+  box-shadow: $content-shadow
+  color: $vendor-black
+  font-size: $text-font-size
+  margin: 5px
+  text-align: center
+  width: 100%
+
+.header
+  background-color: $vendor-cyan
+  color: $vendor-white
+  padding: $box-text-padding
+  text-shadow: $content-shadow
+
+  p
+    display: inline
+    font-size: 1.9em
+    font-weight: bold
+
+.content
+  font-size: 1em
+  padding: $box-text-padding
+  white-space: pre-wrap
+
+.start
+  color: $vendor-red
+
+.transfer
+  color: $vendor-cyan
+
+.passthrough
+  color: $vendor-black
+
+.end
+  color: $vendor-green
+
+img
+  border-radius: 4px
+  box-shadow: $wrapper-shadow
+
+.logo
+  box-shadow: none
+  display: block
+  margin: 0 auto
+  position: relative
+
+header
+  background-color: $vendor-cyan
+  font-size: 10pt
+  height: 140px
+  padding: 5px
+  position: relative
+  width: 100%
+
+// Responsive iframe.
+.iframe-container
+  height: 0
+  max-width: 100%
+  overflow: hidden
+  padding-bottom: 56.25%
+  position: relative
+
+  iframe
+    border: 0
+    height: 100%
+    left: 0
+    position: absolute
+    top: 0
+    width: 100%
+
+footer
+  background-color: $vendor-grey
+  color: $vendor-white
+  font-size: 10pt
+  padding: 15px
+  position: relative
+  text-align: center
+  width: 100%
+
+  p
+    margin: auto
+    width: 100%
+
+@media screen and (min-width: 480px)
+  footer
+    p
+      width: 60%
+
+@media screen and (min-width: 1024px)
+  .col-1
+    flex: 0 0 32.2%
+
+  .col-2
+    flex: 2 0 64.4%
+
+  .col-3
+    flex: 3 0 96.6%
+
+  .wrapper
+    width: 100%
+
+  footer
+    p
+      width: 60%
+
+@media screen and (min-width: 1340px)
+  .wrapper
+    margin: 3em auto
+    width: 80%
+
+  footer
+    p
+      width: 50%
+
+@media screen and (min-width: 1600px)
+  .wrapper
+    width: 70%
