@@ -6,5 +6,6 @@ export enum Tag {
   H6 = 'h6',
   A = 'a',
   IFRAME = 'iframe',
-  FOOTER = 'footer'
+  FOOTER = 'footer',
+  INPUT = 'input'
 }
